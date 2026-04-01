@@ -31,7 +31,8 @@
         .testi-card:hover { border-color: #D4AF37; }
         
         /* Map Box */
-        .map-box { width: 100%; height: 250px; border-radius: 12px; overflow: hidden; border: 2px solid #1a1a1a; filter: grayscale(1) invert(1); }
+        .map-box { width: 100%; height: 350px; border-radius: 12px; overflow: hidden; border: 2px solid #1a1a1a; filter: grayscale(1) invert(1); transition: 0.5s; }
+        .map-box:hover { filter: grayscale(0) invert(0); }
     </style>
 </head>
 <body>
@@ -49,7 +50,7 @@
                 <a href="#" class="hover:text-gold transition">Beranda</a>
                 <a href="#paket" class="hover:text-gold transition">Paket</a>
                 <a href="#testimoni" class="hover:text-gold transition">Testimoni</a>
-                <a href="https://wa.me/6285121113119" target="_blank" class="bg-gold-gradient text-black px-5 py-2 rounded-sm font-black transition hover:scale-105 shadow-[0_0_15px_rgba(212,175,55,0.4)]">DAFTAR</a>
+                <a href="https://wa.me/6285121113119" target="_blank" class="bg-gold-gradient text-black px-5 py-2 rounded-sm font-black transition hover:scale-105">DAFTAR</a>
             </div>
         </div>
     </nav>
@@ -66,30 +67,30 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide swiper-slide-hero text-center md:text-left text-white">
                         <h1 class="hero-content text-4xl md:text-7xl font-extrabold uppercase leading-tight mb-4 tracking-tighter italic">INTERNET <span class="text-gold">STABIL</span><br>TANPA BATAS</h1>
-                        <p class="hero-content max-w-lg text-gray-300 mb-8 text-lg font-light">Koneksi fiber optic murni dari <b>Lintas Speed Network</b>. Cepat, Unlimited, dan Berkelas untuk wilayah Jambi.</p>
-                        <div class="hero-content"><a href="#paket" class="inline-block bg-gold-gradient text-black px-10 py-4 font-black uppercase text-xs tracking-widest transition hover:scale-105">Lihat Paket Promo</a></div>
+                        <p class="hero-content max-w-lg text-gray-300 mb-8 text-lg font-light">Koneksi fiber optic murni dari <b>Lintas Speed Network</b>. Hadir lebih dekat untuk warga Jambi.</p>
+                        <div class="hero-content"><a href="#paket" class="inline-block bg-gold-gradient text-black px-10 py-4 font-black uppercase text-xs tracking-widest transition hover:scale-105">Pilih Paket</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <section class="py-16 bg-[#0a0a0a] border-b border-zinc-800">
-        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-10 text-white text-center">
+    <section class="py-16 bg-[#0a0a0a] border-b border-zinc-800 text-white">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
             <div data-aos="fade-up">
                 <i class="fas fa-bolt text-gold text-4xl mb-4"></i>
                 <h4 class="font-bold mb-2 uppercase tracking-widest">Ultra Cepat</h4>
-                <p class="text-gray-500 text-sm italic">Ping rendah, sangat cocok untuk gaming & video call tanpa lag.</p>
+                <p class="text-gray-500 text-sm">Ping rendah, cocok untuk gaming & video call.</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="200">
                 <i class="fas fa-infinity text-gold text-4xl mb-4"></i>
                 <h4 class="font-bold mb-2 uppercase tracking-widest">Tanpa FUP</h4>
-                <p class="text-gray-500 text-sm italic">Akses internet sepuasnya tanpa batas kuota harian/bulanan.</p>
+                <p class="text-gray-500 text-sm">Internet sepuasnya tanpa batas kuota harian.</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="400">
                 <i class="fas fa-headset text-gold text-4xl mb-4"></i>
                 <h4 class="font-bold mb-2 uppercase tracking-widest">Support 24/7</h4>
-                <p class="text-gray-500 text-sm italic">Tim teknisi standby membantu kendala jaringan Anda kapan saja.</p>
+                <p class="text-gray-500 text-sm">Tim teknisi standby membantu kendala Anda.</p>
             </div>
         </div>
     </section>
@@ -98,85 +99,69 @@
         <div class="container mx-auto px-6 text-center text-white">
             <h2 class="text-3xl font-black uppercase tracking-widest mb-16" data-aos="fade-up">DAFTAR PAKET HOME</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                
                 <div class="bg-dark-card p-8 rounded-xl flex flex-col justify-between" data-aos="zoom-in">
                     <div>
                         <h3 class="text-gray-400 font-bold text-xs uppercase mb-4 tracking-widest">Home-Lite</h3>
                         <div class="text-white text-4xl font-black mb-1 text-gold">Rp 100rb</div>
                         <p class="text-zinc-500 text-[10px] uppercase mb-6 border-b border-zinc-800 pb-4 italic">Per Bulan</p>
                         <ul class="text-left text-gray-400 text-sm space-y-3 mb-8">
-                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Cocok untuk keluarga Kecil</li>
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> 1-2 User</li>
                             <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Browsing & Sosmed</li>
-                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Unlimited Tanpa FUP</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/6285121113119" class="block py-3 border border-gold text-gold font-bold text-[10px] uppercase hover:bg-gold-gradient hover:text-black transition">PILIH</a>
+                    <a href="https://wa.me/6285121113119" target="_blank" class="block py-3 border border-gold text-gold font-bold text-[10px] uppercase hover:bg-gold-gradient hover:text-black transition">PILIH</a>
                 </div>
-
-                <div class="bg-dark-card border-2 border-gold p-8 rounded-xl relative shadow-[0_0_30px_rgba(212,175,55,0.2)] transform lg:scale-110 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold-gradient text-black px-4 py-1 font-black text-[9px] uppercase rounded-full animate-bounce">TERLARIS</div>
+                <div class="bg-dark-card border-2 border-gold p-8 rounded-xl relative shadow-2xl transform lg:scale-110 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold-gradient text-black px-4 py-1 font-black text-[9px] uppercase rounded-full">TERLARIS</div>
                     <div>
                         <h3 class="text-white font-bold text-xs uppercase mb-4 tracking-widest">Home-Smart</h3>
                         <div class="text-gold text-5xl font-black mb-1">Rp 150rb</div>
                         <p class="text-white/50 text-[10px] uppercase mb-6 border-b border-zinc-800 pb-4 italic">Per Bulan</p>
                         <ul class="text-left text-gray-300 text-sm space-y-3 mb-8">
-                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Cocok untuk keluarga menengah</li>
-                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Streaming YouTube HD</li>
-                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Belajar Online/WFH</li>
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> 3-4 User</li>
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> YouTube HD</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/6285121113119" class="block py-3 bg-gold-gradient text-black font-black text-[10px] uppercase shadow-lg">DAFTAR SEKARANG</a>
+                    <a href="https://wa.me/6285121113119" target="_blank" class="block py-3 bg-gold-gradient text-black font-black text-[10px] uppercase">DAFTAR SEKARANG</a>
                 </div>
-
                 <div class="bg-dark-card p-8 rounded-xl flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="200">
                     <div>
                         <h3 class="text-gray-400 font-bold text-xs uppercase mb-4 tracking-widest">Home-Family</h3>
                         <div class="text-white text-4xl font-black mb-1 text-gold">Rp 200rb</div>
                         <p class="text-zinc-500 text-[10px] uppercase mb-6 border-b border-zinc-800 pb-4 italic">Per Bulan</p>
                         <ul class="text-left text-gray-400 text-sm space-y-3 mb-8">
-                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Cocok untuk keluarga besar</li>
-                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Gaming & Streaming 4K</li>
-                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Stabil Banyak Perangkat</li>
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> 5-6 User</li>
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Gaming & 4K</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/6285121113119" class="block py-3 border border-gold text-gold font-bold text-[10px] uppercase hover:bg-gold-gradient hover:text-black transition">PILIH</a>
+                    <a href="https://wa.me/6285121113119" target="_blank" class="block py-3 border border-gold text-gold font-bold text-[10px] uppercase hover:bg-gold-gradient hover:text-black transition">PILIH</a>
                 </div>
-
                 <div class="bg-dark-card p-8 rounded-xl flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="300">
                     <div>
                         <h3 class="text-gray-400 font-bold text-xs uppercase mb-4 tracking-widest">Home-Pro</h3>
                         <div class="text-white text-4xl font-black mb-1 text-gold">Rp 300rb</div>
                         <p class="text-zinc-500 text-[10px] uppercase mb-6 border-b border-zinc-800 pb-4 italic">Per Bulan</p>
                         <ul class="text-left text-gray-400 text-sm space-y-3 mb-8">
-                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Bisnis & Kantor Kecil</li>
-                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Upload & Download Kilat</li>
-                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Prioritas Koneksi Utama</li>
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Kantor Kecil</li>
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Upload Cepat</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/6285121113119" class="block py-3 border border-gold text-gold font-bold text-[10px] uppercase hover:bg-gold-gradient hover:text-black transition">PILIH</a>
+                    <a href="https://wa.me/6285121113119" target="_blank" class="block py-3 border border-gold text-gold font-bold text-[10px] uppercase hover:bg-gold-gradient hover:text-black transition">PILIH</a>
                 </div>
-
             </div>
         </div>
     </section>
 
     <section id="testimoni" class="py-24 bg-[#0a0a0a]">
         <div class="container mx-auto px-6">
-            <h2 class="text-center text-white text-2xl font-black uppercase mb-16 tracking-widest">APA KATA PELANGGAN?</h2>
+            <h2 class="text-center text-white text-2xl font-black uppercase mb-16 tracking-widest">TESTIMONI</h2>
             <div class="swiper swiper-testi">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="testi-card">
-                            <i class="fas fa-quote-left text-gold text-3xl mb-4 opacity-50"></i>
-                            <p class="text-gray-300 italic text-sm mb-8 leading-relaxed italic">"Internet paling stabil di wilayah kami. Streaming 4K dan kerjaan remote jadi sangat lancar."</p>
+                            <i class="fas fa-quote-left text-gold text-2xl mb-4"></i>
+                            <p class="text-gray-300 italic text-sm mb-6">"Internet paling stabil di wilayah kami. Streaming 4K lancar!"</p>
                             <p class="font-bold text-white text-xs uppercase tracking-widest">— Bapak Rizky</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testi-card">
-                            <i class="fas fa-quote-left text-gold text-3xl mb-4 opacity-50"></i>
-                            <p class="text-gray-300 italic text-sm mb-8 leading-relaxed italic">"Pelayanannya sangat ramah dan teknisinya cepat tanggap kalau ada kendala."</p>
-                            <p class="font-bold text-white text-xs uppercase tracking-widest">— Ibu Sari</p>
                         </div>
                     </div>
                 </div>
@@ -185,61 +170,49 @@
         </div>
     </section>
 
-   <footer class="bg-black text-white py-20 border-t border-zinc-900">
+    <footer class="bg-black text-white py-20 border-t border-zinc-900">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16">
-                <div data-aos="fade-right">
+            <div class="grid md:grid-cols-2 gap-16 mb-12">
+                <div>
                     <h4 class="text-gold font-bold uppercase mb-6 border-b border-gold/30 pb-2 inline-block tracking-widest text-sm">Cover Area</h4>
-                    <p class="text-gray-500 text-[10px] mb-4 uppercase tracking-widest font-bold italic">Wilayah Jangkauan Jalur Utama:</p>
+                    <p class="text-gray-500 text-[10px] mb-4 uppercase tracking-widest font-bold">Jalur Siulak - Siulak Deras:</p>
                     
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8 text-[11px] text-zinc-400 uppercase tracking-tighter">
-                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2 text-[10px]"></i> Siulak Mukai</div>
-                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2 text-[10px]"></i> Siulak Gedang</div>
-                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2 text-[10px]"></i> Siulak Kecil</div>
-                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2 text-[10px]"></i> Koto Beringin</div>
-                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2 text-[10px]"></i> Siulak Panjang</div>
-                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2 text-[10px]"></i> Pasar Senen</div>
-                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2 text-[10px]"></i> Koto Rendah</div>
-                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2 text-[10px]"></i> Sungai Pegeh</div>
-                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2 text-[10px]"></i> Koto Lebuh Tinggi</div>
-                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2 text-[10px]"></i> Lubuk Nagodang</div>
-                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2 text-[10px]"></i> Siulak Deras</div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8 text-[11px] text-zinc-400 uppercase">
+                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Siulak Mukai</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Siulak Gedang</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Siulak Panjang</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Siulak Kecil</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Demong Sakti</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Dusun Baru</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Koto Rendah</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Pasar Senen</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Sungai Pegeh</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Koto Lebuh Tinggi</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Tutung Bungkuk</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Pelak Gedang</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Lubuk Nagodang</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Koto Beringin</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Siulak Deras</div>
                     </div>
 
-                    <div class="map-box w-full h-[300px] shadow-[0_0_20px_rgba(212,175,55,0.1)]">
+                    <div class="map-box">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15951.341324748!2d101.3125!3d-1.9562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2d93e18a99477b%3A0x45a35da7fc29750a!2sSiulak%20Deras%2C%20Kec.%20Siulak%2C%20Kabupaten%20Kerinci%2C%20Jambi!5e0!3m2!1sid!2sid!4v1711990000000!5m2!1sid!2sid" 
+                            src="https://www.google.com/maps/place/Nc+master+dessert/@-1.9716009,101.351032,714m/data=!3m1!1e3!4m6!3m5!1s0x2e2da7602614b2bf:0xb9670f1bb0395d06!8m2!3d-1.9716827!4d101.3521383!16s%2Fg%2F11h7t2sy92?hl=id&entry=ttu&g_ep=EgoyMDI2MDMyOS4wIKXMDSoASAFQAw%3D%3D" 
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
                         </iframe>
                     </div>
                 </div>
 
-                <div data-aos="fade-left">
+                <div>
                     <h4 class="text-gold font-bold uppercase mb-6 border-b border-gold/30 pb-2 inline-block tracking-widest text-sm">Hubungi Kami</h4>
-                    <div class="space-y-8 text-gray-400 text-sm italic font-semibold leading-relaxed">
-                        <div class="flex items-start">
-                            <div class="bg-zinc-900 p-3 rounded-lg mr-4 border border-zinc-800">
-                                <i class="fas fa-map-marker-alt text-gold"></i>
-                            </div>
-                            <p>Jl. Lintas Sungai Penuh - Padang, Siulak Deras, Kec. Siulak, Kab. Kerinci, Jambi</p>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="bg-zinc-900 p-3 rounded-lg mr-4 border border-zinc-800">
-                                <i class="fab fa-whatsapp text-gold text-xl"></i>
-                            </div>
-                            <p>0851-2111-3119</p>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="bg-zinc-900 p-3 rounded-lg mr-4 border border-zinc-800">
-                                <i class="fab fa-instagram text-gold text-xl"></i>
-                            </div>
-                            <p>@lintasspeed_network</p>
-                        </div>
+                    <div class="space-y-6 text-gray-400 text-sm italic font-semibold">
+                        <p class="flex items-start"><i class="fas fa-map-marker-alt text-gold mt-1 mr-4"></i> Jl. Lintas Sungai Penuh - Padang, Siulak Deras, Kec. Siulak, Kab. Kerinci, Jambi</p>
+                        <p class="flex items-center"><i class="fab fa-whatsapp text-gold mr-4 text-xl"></i> 0851-2111-3119</p>
+                        <p class="flex items-center"><i class="fab fa-instagram text-gold mr-4 text-xl"></i> @lintasspeed_network</p>
                     </div>
                 </div>
             </div>
-
-            <div class="text-center text-[9px] text-zinc-800 font-bold uppercase tracking-[0.5em] mt-20 pt-10 border-t border-zinc-900 italic">
+            <div class="text-center text-[9px] text-zinc-800 font-bold uppercase tracking-[0.5em] pt-10 border-t border-zinc-900">
                 © 2026 LINTAS SPEED NETWORK | Premium Fiber Connection
             </div>
         </div>
@@ -251,7 +224,7 @@
         AOS.init({ duration: 800, once: true });
         new Swiper('.swiper-bg', { effect: 'fade', autoplay: { delay: 5000 }, loop: true, allowTouchMove: false });
         new Swiper('.swiper-text', { effect: 'fade', autoplay: { delay: 7000 }, loop: true, allowTouchMove: false });
-        new Swiper('.swiper-testi', { slidesPerView: 1, spaceBetween: 20, autoplay: { delay: 4000 }, loop: true, pagination: { el: '.swiper-pagination', clickable: true }, breakpoints: { 768: { slidesPerView: 2 } } });
+        new Swiper('.swiper-testi', { slidesPerView: 1, spaceBetween: 20, autoplay: { delay: 4000 }, loop: true, pagination: { el: '.swiper-pagination', clickable: true } });
     </script>
 </body>
 </html>
