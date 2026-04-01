@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lintas Speed Network | Koneksi Premium</title>
+    <title>Lintas Speed Network | Premium Fiber Connection</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -11,49 +11,52 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
-        body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; overflow-x: hidden; background-color: #000; }
         .bg-gold-gradient { background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); }
         .text-gold { color: #D4AF37; }
-        .bg-dark-premium { background-color: #0a0a0a; }
+        .bg-dark-card { background-color: #111111; border: 1px solid #222; }
         
-        /* Hover Effect */
-        .hover-float { transition: all 0.3s ease; }
-        .hover-float:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2); }
-        
-        /* HERO SLIDER FIXED */
-        .hero-wrapper { position: relative; height: 650px; width: 100%; background: #000; overflow: hidden; }
+        /* Hero Slider */
+        .hero-wrapper { position: relative; height: 600px; width: 100%; overflow: hidden; }
         .swiper-bg { position: absolute !important; inset: 0; z-index: 1; }
         .bg-slide-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; }
         .swiper-text { position: relative; z-index: 10; height: 100%; }
-        
-        .swiper-slide-hero { 
-            opacity: 0 !important; 
-            transition: opacity 1.2s ease-in-out; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center;
-        }
+        .swiper-slide-hero { opacity: 0 !important; transition: opacity 1s ease-in-out; display: flex; flex-direction: column; justify-content: center; }
         .swiper-slide-active { opacity: 1 !important; }
-
         .hero-content { transform: translateY(30px); opacity: 0; transition: all 0.8s ease; }
         .swiper-slide-active .hero-content { transform: translateY(0); opacity: 1; }
-        .delay-1 { transition-delay: 0.2s; }
-        .delay-2 { transition-delay: 0.4s; }
-        .delay-3 { transition-delay: 0.6s; }
-
-        /* Testimonial Customization */
-        .swiper-testi { padding-bottom: 50px !important; }
+        
+        /* --- PERBAIKAN TESTIMONI STYLING --- */
+        .swiper-testi { padding: 20px 20px 60px 20px !important; }
+        .testi-card { 
+            background: #111; 
+            border: 1px solid #333; 
+            border-radius: 20px; 
+            padding: 2.5rem; 
+            height: 100%; 
+            transition: 0.4s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        .testi-card:hover { border-color: #D4AF37; transform: translateY(-5px); }
+        .testi-quote { color: #D4AF37; font-size: 2rem; margin-bottom: 1rem; opacity: 0.5; }
+        .swiper-pagination-bullet { background: #555 !important; opacity: 1; }
         .swiper-pagination-bullet-active { background: #D4AF37 !important; }
+        
+        /* Map Box */
+        .map-box { width: 100%; height: 250px; border-radius: 12px; overflow: hidden; border: 2px solid #1a1a1a; filter: grayscale(1) invert(1); }
     </style>
 </head>
-<body class="bg-white text-gray-800">
+<body>
 
     <nav class="bg-black/95 backdrop-blur-md sticky top-0 z-50 border-b border-yellow-900/30">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3" data-aos="fade-right">
+            <div class="flex items-center space-x-3">
                 <img src="Lintas_Speed_Network_logo.png" alt="Logo" class="h-10 md:h-14">
-                <div class="flex flex-col">
-                    <span class="text-white font-black text-lg md:text-xl leading-none tracking-tighter uppercase">LINTAS <span class="text-gold">SPEED</span></span>
+                <div class="flex flex-col text-white">
+                    <span class="font-black text-lg md:text-xl leading-none tracking-tighter uppercase">LINTAS <span class="text-gold">SPEED</span></span>
                     <span class="text-gold font-bold text-[10px] md:text-xs tracking-[0.3em] uppercase">Network</span>
                 </div>
             </div>
@@ -61,7 +64,7 @@
                 <a href="#" class="hover:text-gold transition">Beranda</a>
                 <a href="#paket" class="hover:text-gold transition">Paket</a>
                 <a href="#testimoni" class="hover:text-gold transition">Testimoni</a>
-                <a href="https://forms.gle/asAJ3jKvVejHUtrQA" target="_blank" class="bg-gold-gradient text-black px-6 py-2 rounded-sm font-black transition hover:scale-105">DAFTAR</a>
+                <a href="https://wa.me/6285121113119" target="_blank" class="bg-gold-gradient text-black px-5 py-2 rounded-sm font-black transition hover:scale-105 shadow-[0_0_15px_rgba(212,175,55,0.5)]">DAFTAR</a>
             </div>
         </div>
     </nav>
@@ -73,112 +76,150 @@
                 <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1600" class="bg-slide-img"></div>
             </div>
         </div>
-        
         <div class="container mx-auto px-6 h-full relative">
             <div class="swiper swiper-text">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide swiper-slide-hero text-center md:text-left text-white">
-                        <h1 class="hero-content delay-1 text-4xl md:text-7xl font-extrabold uppercase leading-tight mb-4">
-                            INTERNET <span class="text-gold">STABIL</span><br>TANPA BATAS
-                        </h1>
-                        <p class="hero-content delay-2 max-w-lg text-gray-300 mb-8 text-lg font-light">
-                            Nikmati koneksi fiber optic murni dari <b>Lintas Speed Network</b>. Cepat, Unlimited, dan Berkelas mulai 100rb-an.
-                        </p>
-                        <div class="hero-content delay-3">
-                            <a href="#paket" class="inline-block bg-gold-gradient text-black px-10 py-4 font-black uppercase text-sm tracking-widest shadow-2xl transition hover:scale-105">Lihat Paket</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide-hero text-center md:text-left text-white">
-                        <h1 class="hero-content delay-1 text-4xl md:text-7xl font-extrabold uppercase leading-tight mb-4 text-gold">
-                            PROMO <br>BEBAS PASANG
-                        </h1>
-                        <p class="hero-content delay-2 max-w-lg text-gray-300 mb-8 text-lg font-light">
-                            Daftar sekarang dan dapatkan Gratis Biaya Instalasi! Kuota pendaftaran terbatas untuk bulan ini.
-                        </p>
-                        <div class="hero-content delay-3">
-                            <a href="https://forms.gle/asAJ3jKvVejHUtrQA" target="_blank" class="inline-block bg-gold-gradient text-black px-10 py-4 font-black uppercase text-sm tracking-widest animate-pulse">Ambil Promo</a>
-                        </div>
+                        <h1 class="hero-content text-4xl md:text-7xl font-extrabold uppercase leading-tight mb-4 tracking-tighter italic">INTERNET <span class="text-gold">STABIL</span><br>TANPA BATAS</h1>
+                        <p class="hero-content max-w-lg text-gray-300 mb-8 text-lg font-light">Koneksi fiber optic murni dari <b>Lintas Speed Network</b>. Cepat, Unlimited, dan Berkelas.</p>
+                        <div class="hero-content"><a href="#paket" class="inline-block bg-gold-gradient text-black px-10 py-4 font-black uppercase text-xs tracking-widest transition hover:scale-105">Lihat Paket</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <section class="py-16 bg-zinc-900 border-b border-zinc-800">
-        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-10">
+    <section class="py-16 bg-[#0a0a0a] border-b border-zinc-800">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-10 text-white">
             <div class="text-center" data-aos="fade-up">
                 <i class="fas fa-bolt text-gold text-4xl mb-4"></i>
-                <h4 class="text-white font-bold mb-2">Ultra Cepat</h4>
-                <p class="text-gray-500 text-sm">Ping rendah, cocok untuk gaming dan video call.</p>
+                <h4 class="font-bold mb-2 uppercase tracking-widest">Ultra Cepat</h4>
+                <p class="text-gray-500 text-sm">Ping rendah untuk gaming & video call tanpa lag.</p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-delay="200">
                 <i class="fas fa-infinity text-gold text-4xl mb-4"></i>
-                <h4 class="text-white font-bold mb-2">Tanpa FUP</h4>
-                <p class="text-gray-500 text-sm">Pakai sepuasnya tanpa takut kuota habis.</p>
+                <h4 class="font-bold mb-2 uppercase tracking-widest">Tanpa FUP</h4>
+                <p class="text-gray-500 text-sm">Internet sepuasnya tanpa batas kuota harian.</p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-delay="400">
                 <i class="fas fa-headset text-gold text-4xl mb-4"></i>
-                <h4 class="text-white font-bold mb-2">Support 24/7</h4>
+                <h4 class="font-bold mb-2 uppercase tracking-widest">Support 24/7</h4>
                 <p class="text-gray-500 text-sm">Tim teknisi standby membantu kendala Anda.</p>
             </div>
         </div>
     </section>
 
-    <section id="paket" class="py-24 bg-dark-premium">
+    <section id="paket" class="py-24">
         <div class="container mx-auto px-6 text-center text-white">
-            <h2 class="text-3xl font-black uppercase tracking-widest mb-16" data-aos="fade-up">Daftar Paket Home</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
-                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-xl hover-float group" data-aos="zoom-in">
-                    <h3 class="text-gray-400 font-bold text-xs uppercase mb-4 tracking-widest">Home-Lite</h3>
-                    <div class="text-white text-3xl font-black mb-1">Rp 100rb</div>
-                    <div class="text-gold text-xs italic mb-8 border-t border-zinc-800 pt-4">per bulan</div>
-                    <a href="https://forms.gle/asAJ3jKvVejHUtrQA" target="_blank" class="block py-3 border border-gold text-gold font-bold text-[10px] uppercase tracking-widest hover:bg-gold-gradient hover:text-black transition">Pilih</a>
+            <h2 class="text-3xl font-black uppercase tracking-widest mb-16" data-aos="fade-up">DAFTAR PAKET HOME</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-dark-card p-8 rounded-xl flex flex-col justify-between" data-aos="zoom-in">
+                    <div>
+                        <h3 class="text-gray-400 font-bold text-xs uppercase mb-4 tracking-widest">Home-Lite</h3>
+                        <div class="text-white text-4xl font-black mb-1 text-gold">Rp 100rb</div>
+                        <p class="text-zinc-500 text-[10px] uppercase mb-6 border-b border-zinc-800 pb-4">Per Bulan</p>
+                        <ul class="text-left text-gray-400 text-sm space-y-3 mb-8 italic">
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> 1-2 User</li>
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Browsing & Medsos</li>
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Unlimited</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6285121113119" target="_blank" class="block py-3 border border-gold text-gold font-bold text-[10px] uppercase hover:bg-gold-gradient hover:text-black transition">PILIH</a>
                 </div>
-                <div class="bg-zinc-900 border-2 border-gold p-8 rounded-xl relative shadow-2xl transform lg:scale-110" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold-gradient text-black px-4 py-1 font-black text-[9px] uppercase tracking-widest rounded-full animate-bounce">Terlaris</div>
-                    <h3 class="text-white font-bold text-xs uppercase mb-4 tracking-widest">Home-Smart</h3>
-                    <div class="text-gold text-4xl font-black mb-1">Rp 150rb</div>
-                    <div class="text-white/50 text-xs italic mb-8 border-t border-zinc-800 pt-4">per bulan</div>
-                    <a href="https://forms.gle/asAJ3jKvVejHUtrQA" target="_blank" class="block py-3 bg-gold-gradient text-black font-black text-[10px] uppercase tracking-widest">Daftar</a>
+                <div class="bg-dark-card border-2 border-gold p-8 rounded-xl relative shadow-[0_0_30px_rgba(212,175,55,0.2)] transform lg:scale-110 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold-gradient text-black px-4 py-1 font-black text-[9px] uppercase rounded-full animate-bounce">TERLARIS</div>
+                    <div>
+                        <h3 class="text-white font-bold text-xs uppercase mb-4 tracking-widest">Home-Smart</h3>
+                        <div class="text-gold text-5xl font-black mb-1">Rp 150rb</div>
+                        <p class="text-white/50 text-[10px] uppercase mb-6 border-b border-zinc-800 pb-4">Per Bulan</p>
+                        <ul class="text-left text-gray-300 text-sm space-y-3 mb-8 italic">
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> 3-4 User</li>
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Streaming YouTube HD</li>
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Sekolah & Kerja Online</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6285121113119" target="_blank" class="block py-3 bg-gold-gradient text-black font-black text-[10px] uppercase shadow-lg">DAFTAR SEKARANG</a>
                 </div>
-                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-xl hover-float" data-aos="zoom-in" data-aos-delay="200">
-                    <h3 class="text-gray-400 font-bold text-xs uppercase mb-4 tracking-widest">Home-Family</h3>
-                    <div class="text-white text-3xl font-black mb-1">Rp 200rb</div>
-                    <div class="text-gold text-xs italic mb-8 border-t border-zinc-800 pt-4">per bulan</div>
-                    <a href="https://forms.gle/asAJ3jKvVejHUtrQA" target="_blank" class="block py-3 border border-gold text-gold font-bold text-[10px] uppercase tracking-widest hover:bg-gold-gradient hover:text-black transition">Pilih</a>
+                <div class="bg-dark-card p-8 rounded-xl flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="200">
+                    <div>
+                        <h3 class="text-gray-400 font-bold text-xs uppercase mb-4 tracking-widest">Home-Family</h3>
+                        <div class="text-white text-4xl font-black mb-1 text-gold">Rp 200rb</div>
+                        <p class="text-zinc-500 text-[10px] uppercase mb-6 border-b border-zinc-800 pb-4">Per Bulan</p>
+                        <ul class="text-left text-gray-400 text-sm space-y-3 mb-8 italic">
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> 5-6 User</li>
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Gaming & Streaming 4K</li>
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Stabil Banyak Device</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6285121113119" target="_blank" class="block py-3 border border-gold text-gold font-bold text-[10px] uppercase hover:bg-gold-gradient hover:text-black transition">PILIH</a>
                 </div>
-                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-xl hover-float" data-aos="zoom-in" data-aos-delay="300">
-                    <h3 class="text-gray-400 font-bold text-xs uppercase mb-4 tracking-widest">Home-Pro</h3>
-                    <div class="text-white text-3xl font-black mb-1">Rp 300rb</div>
-                    <div class="text-gold text-xs italic mb-8 border-t border-zinc-800 pt-4">per bulan</div>
-                    <a href="https://forms.gle/asAJ3jKvVejHUtrQA" target="_blank" class="block py-3 border border-gold text-gold font-bold text-[10px] uppercase tracking-widest hover:bg-gold-gradient hover:text-black transition">Pilih</a>
+                <div class="bg-dark-card p-8 rounded-xl flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="300">
+                    <div>
+                        <h3 class="text-gray-400 font-bold text-xs uppercase mb-4 tracking-widest">Home-Pro</h3>
+                        <div class="text-white text-4xl font-black mb-1 text-gold">Rp 300rb</div>
+                        <p class="text-zinc-500 text-[10px] uppercase mb-6 border-b border-zinc-800 pb-4">Per Bulan</p>
+                        <ul class="text-left text-gray-400 text-sm space-y-3 mb-8 italic">
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Bisnis & Kantor</li>
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Upload/Download Kilat</li>
+                            <li><i class="fas fa-check text-gold mr-2 text-[10px]"></i> Prioritas Koneksi</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6285121113119" target="_blank" class="block py-3 border border-gold text-gold font-bold text-[10px] uppercase hover:bg-gold-gradient hover:text-black transition">PILIH</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="testimoni" class="py-24 bg-zinc-50 overflow-hidden">
+    <section id="testimoni" class="py-24 bg-[#0a0a0a]">
         <div class="container mx-auto px-6">
-            <h2 class="text-center text-2xl font-black uppercase text-zinc-900 mb-12 tracking-widest" data-aos="fade-up">Apa Kata Pelanggan Kami</h2>
-            <div class="swiper swiper-testi">
+            <h2 class="text-center text-white text-2xl font-black uppercase mb-4 tracking-[0.3em]" data-aos="fade-up">TESTIMONI</h2>
+            <p class="text-center text-zinc-500 text-[10px] uppercase mb-16 tracking-widest" data-aos="fade-up">Apa kata mereka yang telah bergabung bersama kami</p>
+            
+            <div class="swiper swiper-testi" data-aos="zoom-in">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="bg-white p-8 rounded-xl shadow-xl border-l-4 border-gold h-full">
-                            <p class="italic text-gray-600 mb-4 font-semibold">"Internet paling stabil di wilayah kami. Streaming 4K lancar jaya tanpa kendala."</p>
-                            <p class="font-bold text-black uppercase text-xs">— Bapak Rizky</p>
+                        <div class="testi-card">
+                            <div>
+                                <i class="fas fa-quote-left testi-quote"></i>
+                                <p class="text-gray-300 italic text-sm leading-relaxed mb-8">"Luar biasa stabil! Di daerah Siulak Deras biasanya susah sinyal, tapi pakai Lintas Speed Network buat streaming YouTube 4K lancar jaya tanpa buffering."</p>
+                            </div>
+                            <div class="flex items-center space-x-4 border-t border-zinc-800 pt-6">
+                                <div class="h-10 w-10 bg-gold-gradient rounded-full flex items-center justify-center font-bold text-black">R</div>
+                                <div>
+                                    <h5 class="text-white font-bold text-xs uppercase tracking-widest">Bapak Rizky</h5>
+                                    <p class="text-gold text-[9px] uppercase font-bold">Pelanggan Home-Smart</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="bg-white p-8 rounded-xl shadow-xl border-l-4 border-gold h-full">
-                            <p class="italic text-gray-600 mb-4 font-semibold">"Harganya sangat jujur, tidak ada biaya tersembunyi. Tim teknisi sangat responsif."</p>
-                            <p class="font-bold text-black uppercase text-xs">— Ibu Sari</p>
+                        <div class="testi-card">
+                            <div>
+                                <i class="fas fa-quote-left testi-quote"></i>
+                                <p class="text-gray-300 italic text-sm leading-relaxed mb-8">"Teknisinya sangat ramah dan cepat tanggap. Pasang pagi, siang sudah bisa dipakai buat anak sekolah online. Harganya pun sangat jujur."</p>
+                            </div>
+                            <div class="flex items-center space-x-4 border-t border-zinc-800 pt-6">
+                                <div class="h-10 w-10 bg-gold-gradient rounded-full flex items-center justify-center font-bold text-black">S</div>
+                                <div>
+                                    <h5 class="text-white font-bold text-xs uppercase tracking-widest">Ibu Sari</h5>
+                                    <p class="text-gold text-[9px] uppercase font-bold">Pelanggan Home-Lite</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="bg-white p-8 rounded-xl shadow-xl border-l-4 border-gold h-full">
-                            <p class="italic text-gray-600 mb-4 font-semibold">"Pas buat gaming! Ping rendah dan stabil meskipun dipakai ramai-ramai sekeluarga."</p>
-                            <p class="font-bold text-black uppercase text-xs">— Andre, Gamer</p>
+                        <div class="testi-card">
+                            <div>
+                                <i class="fas fa-quote-left testi-quote"></i>
+                                <p class="text-gray-300 italic text-sm leading-relaxed mb-8">"Sebagai gamer, ping itu nomor satu. Pakai Lintas Speed Network main Mobile Legends dan PUBG stabil banget di ping hijau terus. No FUP pula!"</p>
+                            </div>
+                            <div class="flex items-center space-x-4 border-t border-zinc-800 pt-6">
+                                <div class="h-10 w-10 bg-gold-gradient rounded-full flex items-center justify-center font-bold text-black">A</div>
+                                <div>
+                                    <h5 class="text-white font-bold text-xs uppercase tracking-widest">Andre</h5>
+                                    <p class="text-gold text-[9px] uppercase font-bold">Pelanggan Home-Family</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -187,51 +228,40 @@
         </div>
     </section>
 
-    <footer class="bg-black text-white py-16">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 text-center md:text-left">
+    <footer class="bg-black text-white py-20 border-t border-zinc-900">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16">
             <div>
                 <h4 class="text-gold font-bold uppercase mb-6 border-b border-gold/30 pb-2 inline-block tracking-widest text-sm">Cover Area</h4>
-                <p class="text-gray-400 text-sm font-semibold italic">Siulak, Kab. Kerinci, Provinsi Jambi</p>
+                <p class="text-gray-500 text-[10px] mb-4 uppercase tracking-widest font-bold">Jalur Siulak - Siulak Deras</p>
+                <div class="map-box">
+                    <iframe src="http://googleusercontent.com/maps.google.com/5" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
             <div>
-                <h4 class="text-gold font-bold uppercase mb-6 border-b border-gold/30 pb-2 inline-block tracking-widest text-sm">Kontak Kami</h4>
-                <p class="text-gray-400 text-sm mb-6"><i class="fab fa-whatsapp text-gold mr-3"></i> 0851-2111-3119</p>
-                <div class="flex justify-center md:justify-start space-x-8 text-2xl text-gray-500">
-                    <a href="https://wa.me/6285121113119" target="_blank" class="hover:text-gold transition"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" target="_blank" class="hover:text-gold transition"><i class="fab fa-instagram"></i></a>
+                <h4 class="text-gold font-bold uppercase mb-6 border-b border-gold/30 pb-2 inline-block tracking-widest text-sm">Kontak & Alamat</h4>
+                <div class="space-y-6 text-gray-400 text-sm">
+                    <p class="flex items-start"><i class="fas fa-map-marker-alt text-gold mt-1 mr-4"></i> Jl. Lintas Sungai Penuh - Padang, Siulak Deras, Kec. Siulak, Kab. Kerinci, Jambi</p>
+                    <p class="flex items-center"><i class="fab fa-whatsapp text-gold mr-4 text-xl"></i> 0851-2111-3119</p>
+                    <p class="flex items-center"><i class="fab fa-instagram text-gold mr-4 text-xl"></i> @lintasspeed_network</p>
                 </div>
             </div>
         </div>
-        <div class="text-center text-[10px] text-zinc-800 font-bold uppercase tracking-[0.4em] mt-16">&copy; 2026 LINTAS SPEED NETWORK</div>
+        <div class="text-center text-[9px] text-zinc-800 font-bold uppercase tracking-[0.5em] mt-20 pt-10 border-t border-zinc-900">© 2026 LINTAS SPEED NETWORK | All Rights Reserved.</div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
+        new Swiper('.swiper-bg', { effect: 'fade', autoplay: { delay: 5000 }, loop: true, allowTouchMove: false });
+        new Swiper('.swiper-text', { effect: 'fade', autoplay: { delay: 7000 }, loop: true, allowTouchMove: false });
         
-        // Hero Background
-        new Swiper('.swiper-bg', { 
-            effect: 'fade', 
-            autoplay: { delay: 5000 }, 
+        // --- Perbaikan Swiper Testimoni JS ---
+        new Swiper('.swiper-testi', { 
+            slidesPerView: 1, 
+            spaceBetween: 30, 
+            autoplay: { delay: 4000, disableOnInteraction: false }, 
             loop: true, 
-            allowTouchMove: false 
-        });
-
-        // Hero Text
-        new Swiper('.swiper-text', { 
-            effect: 'fade', 
-            autoplay: { delay: 7000 }, 
-            loop: true, 
-            allowTouchMove: false 
-        });
-
-        // Testimonial
-        new Swiper('.swiper-testi', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            autoplay: { delay: 4000 },
-            loop: true,
             pagination: { el: '.swiper-pagination', clickable: true },
             breakpoints: {
                 768: { slidesPerView: 2 },
